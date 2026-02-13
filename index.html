@@ -1,110 +1,114 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
-
-    <title>💗 Feliz San Valentín 💗 </title>
-    <meta name="description" content="Para ti mi vidita hermosa 💗 | Te amoo ">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti mi vidita hermosa 💗</title>
+    <meta name="description" content="Una sorpresa para mi persona favorita">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <section id="splash">
-        <h1>Tengo algo importante que preguntarte…</h1>
-        <p>toca la pantalla para continuar</p>
+        <div class="splash-content">
+            <h1>Tengo algo que decirte...</h1>
+            <p>Toca la pantalla para empezar</p>
+        </div>
     </section>
 
     <section id="mensaje_principal">
-
-        <h2>Llevamos juntos</h2>
-
-        <div id="contador"> </div>
-
-        <p class="subtitulo">Y en todo este tiempo hemos vivido cosas hermosas</p>
-
+        <div class="container">
+            <h2>Llevamos juntos</h2>
+            <div id="contador">Cargando...</div>
+            <p class="subtitulo">Y cada segundo ha a tu lado a sido hermoso</p>
+            <div class="scroll-indicator">↓</div>
+        </div>
     </section>
 
     <section id="linea_tiempo">
-
-        <h3>Nuestra historia</h3>
-
-        <div class="meses">
-
-            <h4> Primer mes</h4>
-
-            <img src="img/mes1.webp" alt="Primer mes juntos">
-
-            <p> Este fue nuestro primer mes de novios, recuerdas que fuimos al cine
-                y después a comer sushi Burger para después terminar dándosela a tu papa,
-                fue un dia hermoso.
-            </p>
-
-        </div>
-
-
-        <div class="meses">
-
-            <h4> Tercer mes</h4>
-
-            <img src="img/mes3.webp" alt="Tercer mes juntos">
-
-            <p> En el tercer mes fuimos a comer a nuestro lugar favorito,
-                y probamos las Crumbl cookies y estuvimos todo el dia juntos
-                viendo películas.
-            </p>
-
+        <div class="titulo-seccion">
+            <h3>Nuestra Historia</h3>
         </div>
 
         <div class="meses">
-
-            <h4> Sexto mes</h4>
-
-            <img src="img/mes6.webp" alt="Sexto mes juntos">
-
-            <p> En este mes adoptamos a nuestra bebe, nuestra mika que nos da tanto dolores de cabezas
-                pero también alegrías, la que te ace rabiar cuando se arranca.
-            </p>
-
+            <div class="lado_imagen">
+                <div class="polaroid">
+                    <img src="img/mes1.webp" alt="Primer mes juntos">
+                    <span>Primer mes</span>
+                </div>
+            </div>
+            <div class="lado_texto">
+                <p>Este fue nuestro primer mes juntos. ¿Recuerdas que fuimos al cine y después a comer sushi Burgers?
+                    Y terminamos dándosela a tu papá, pero fue un día simplemente hermoso.</p>
+            </div>
         </div>
 
         <div class="meses">
-
-            <h4> Octavo mes</h4>
-
-            <img src="img/mes8.webp" alt="Octavo mes juntos">
-
-            <p> Cuando cumplimos 8 meses fue de mis momentos favoritos, cuando me hiciste una sorpresa para mi
-                cumpleaños y esperaste
-                las 12 para cantarme feliz cumpleaños.
-            </p>
-
+            <div class="lado_imagen">
+                <div class="polaroid">
+                    <img src="img/mes3.webp" alt="Tercer mes juntos">
+                    <span>Tercer mes</span>
+                </div>
+            </div>
+            <div class="lado_texto">
+                <p>En el tercer mes fuimos a comer a nuestro lugar favorito, probamos las Crumbl cookies y estuvimos
+                    todo el día viendo películas juntos.</p>
+            </div>
         </div>
 
+        <div class="meses">
+            <div class="lado_imagen">
+                <div class="polaroid">
+                    <img src="img/mes6.webp" alt="Sexto mes juntos">
+                    <span>Sexto mes</span>
+                </div>
+            </div>
+            <div class="lado_texto">
+                <p>Aquí adoptamos a nuestra bebé, la Mika. Nos da dolores de cabeza cuando se arranca y te hace rabiar,
+                    pero nos ha dado demasiadas alegrías con sus tonteras.</p>
+            </div>
+        </div>
+
+        <div class="meses">
+            <div class="lado_imagen">
+                <div class="polaroid">
+                    <img src="img/mes8.webp" alt="Octavo mes juntos">
+                    <span>Octavo mes</span>
+                </div>
+            </div>
+            <div class="lado_texto">
+                <p>Cuando cumplimos 8 meses fue de mis momentos favoritos. Me hiciste una sorpresa y
+                    esperaste hasta las 12 solo para cantarme el feliz cumpleaños.</p>
+            </div>
+        </div>
     </section>
 
     <section id="mensaje_final">
-
-        <h3>Y por todos los momentos que pasamos juntos quería preguntarte… </h3>
-
+        <div class="container">
+            <p>Por todos estos momentos juntos y los que nos faltan. Quería preguntarte</p>
+        </div>
     </section>
 
     <section id="mensaje_sanvalentin">
-
-        <h1> ¿Quieres ser mi san Valentín?</h1>
-
-        <div class="botones">
-
-            <button id="btn_si">Sí</button>
-
-            <button id="btn_no">No</button>
-
+        <div class="card-pregunta">
+            <h1>¿Quieres ser mi San Valentín?</h1>
+            <div class="botones">
+                <button id="btn_si">¡Sí, obvio!</button>
+                <button id="btn_no">No</button>
+            </div>
         </div>
-
     </section>
 
-
     <script src="script.js"></script>
-
 </body>
+
+</html>

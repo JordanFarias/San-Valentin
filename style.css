@@ -1,0 +1,339 @@
+/* --- VARIABLES Y CONFIGURACIÓN --- */
+:root {
+    --bg-color: #fdfbf7;
+    /* Crema suave */
+    --text-color: #4a4a4a;
+    /* Gris elegante */
+    --accent-color: #c0392b;
+    /* Rojo Terracota */
+    --accent-light: #e74c3c;
+    /* Rojo más claro */
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    /* Evita scroll horizontal */
+}
+
+/* --- SPLASH SCREEN --- */
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--accent-color);
+    color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.8s ease;
+    /* Desvanecimiento suave */
+}
+
+#splash h1 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#splash p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    animation: palpitar 2s infinite;
+}
+
+/* --- MENSAJE PRINCIPAL (HERO) --- */
+#mensaje_principal {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+#mensaje_principal h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+#contador {
+    font-size: 1.5rem;
+    /* Base size */
+    font-weight: 600;
+    margin: 20px 0;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+.subtitulo {
+    font-style: italic;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    opacity: 0.5;
+    color: var(--accent-color);
+}
+
+/* --- LÍNEA DE TIEMPO (Estilo Polaroid) --- */
+#linea_tiempo {
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titulo-seccion h3 {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 4rem;
+}
+
+.meses {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    /* Espacio entre historias */
+}
+
+/* Alternancia */
+.meses:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.lado_texto,
+.lado_imagen {
+    flex: 1;
+}
+
+/* Texto */
+.lado_texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.meses:nth-child(odd) .lado_texto {
+    text-align: right;
+}
+
+/* --- EL EFECTO POLAROID --- */
+.polaroid {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    /* Padding abajo extra para simular el borde ancho */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    /* Sombra realista */
+    transition: transform 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+.polaroid img {
+    width: 100%;
+    max-width: 350px;
+    /* Tamaño máximo de la foto */
+    height: auto;
+    display: block;
+    filter: sepia(10%);
+    /* Un toque cálido sutil */
+}
+
+/* Texto escrito en la polaroid (opcional) */
+.polaroid span {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    /* Fuente tipo máquina de escribir */
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Rotaciones aleatorias para realismo */
+.meses:nth-child(odd) .polaroid {
+    transform: rotate(3deg);
+}
+
+.meses:nth-child(even) .polaroid {
+    transform: rotate(-2deg);
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    /* Efecto al pasar el mouse */
+    z-index: 10;
+}
+
+
+/* --- SECCIONES FINALES --- */
+#mensaje_final {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+#mensaje_sanvalentin {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #fff0f3, var(--bg-color));
+    padding: 2rem;
+}
+
+.card-pregunta {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+#mensaje_sanvalentin h1 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+/* --- BOTONES --- */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Para que no se rompa en pantallas muy chicas */
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#btn_si {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+#btn_si:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(192, 57, 43, 0.3);
+}
+
+#btn_no {
+    background-color: #e0e0e0;
+    color: #666;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    #mensaje_principal h2 {
+        font-size: 2rem;
+    }
+
+    #contador {
+        font-size: 1.1rem;
+    }
+
+    .meses {
+        flex-direction: column !important;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .lado_texto,
+    .meses:nth-child(odd) .lado_texto {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .titulo-seccion h3 {
+        font-size: 2rem;
+    }
+
+    .polaroid img {
+        max-width: 100%;
+    }
+}
+
+/* Animaciones simples */
+@keyframes palpitar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
